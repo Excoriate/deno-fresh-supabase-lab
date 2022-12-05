@@ -1,23 +1,21 @@
 ---
 version: '3'
 
-#includes:
-#  dynamodb:
-#    taskfile: ./terraform/modules/dynamodb/TaskFile.yml
-#    dir: ./terraform/modules/dynamodb
 tasks:
-  fmt:
+  setup:
+    dir: scripts/setup
     cmds:
-      - terraform fmt -recursive -write=true
+      - ./deno-warmup.sh
 
-  dev:
+  denon:
     cmds:
       - |
         denon run -A --allow-net main.ts
 
-  denon:
+  dev:
     cmds:
-      - deno install -qAf --unstable https://deno.land/x/denon/denon.ts
+      - |
+        deno run -A --watch=static/,routes/ dev.ts
 
   ci:
     cmds:
