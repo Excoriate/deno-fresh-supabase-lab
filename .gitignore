@@ -1,0 +1,101 @@
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# SonarLint plugin
+.idea/sonarlint/
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+*.orig
+*.pyc
+*.swp
+.env
+
+/.cargo_home/
+/.idea/
+/.vscode/
+gclient_config.py_entries
+/gh-pages/
+/target/
+/std/hash/_wasm/target
+/tools/wpt/manifest.json
+/test_napi/node_modules
+/test_napi/build
+/test_napi/third_party_tests/node_modules
+
+# Files that help ensure VSCode can work but we don't want checked into the
+# repo
+/node_modules
+/tsconfig.json
+
+# compiled wasm files
+std/wasi/testdata/snapshot_preview1/
+
+# generated v8 coverage files
+cli/tests/.test_coverage/
+
+# MacOS generated files
+.DS_Store
+.DS_Store?
+
+# Flamegraphs
+/flamebench*.svg
+/flamegraph*.svg
+
+# WPT generated cert files
+/tools/wpt/certs/index.txt*
+/tools/wpt/certs/serial*
+

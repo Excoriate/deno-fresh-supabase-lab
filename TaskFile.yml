@@ -1,0 +1,24 @@
+---
+version: '3'
+
+#includes:
+#  dynamodb:
+#    taskfile: ./terraform/modules/dynamodb/TaskFile.yml
+#    dir: ./terraform/modules/dynamodb
+tasks:
+  fmt:
+    cmds:
+      - terraform fmt -recursive -write=true
+
+  dev:
+    cmds:
+      - |
+        denon run -A --allow-net main.ts
+
+  denon:
+    cmds:
+      - deno install -qAf --unstable https://deno.land/x/denon/denon.ts
+
+  ci:
+    cmds:
+      - deno fmt && deno lint
