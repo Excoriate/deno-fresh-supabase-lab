@@ -2,21 +2,22 @@
 version: '3'
 
 tasks:
-  setup:
-    dir: scripts/setup
-    cmds:
-      - ./deno-warmup.sh
+    setup:
+        dir: scripts/setup
+        cmds:
+            - ./deno-warmup.sh
 
-  denon:
-    cmds:
-      - |
-        denon run -A --allow-net main.ts
+    denon:
+        cmds:
+            - |
+              denon run -A --allow-net main.ts
 
-  dev:
-    cmds:
-      - |
-        deno run -A --watch=static/,routes/ dev.ts
+    dev:
+        cmds:
+            - |
+              deno run -A --watch=static/,routes/ dev.ts
 
-  ci:
-    cmds:
-      - deno fmt && deno lint
+    ci:
+        cmds:
+            - deno fmt && deno lint
+            - pre-commit run --all-files
