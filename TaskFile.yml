@@ -20,4 +20,7 @@ tasks:
     ci:
         cmds:
             - deno fmt && deno lint
-            - pre-commit run --all-files
+
+    pre-commit:
+        cmds:
+            - pre-commit run --show-diff-on-failure --color always --all-files {{.CLI_ARGS}} # Pass arguments using -- <arg1> <arg2> ...
